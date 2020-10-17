@@ -1,4 +1,3 @@
--- Insert data SQL
 -- -----------------------------------------------------
 -- Data for table `OCPizza`.`Pizzeria`
 -- -----------------------------------------------------
@@ -87,6 +86,7 @@ USE `OCPizza`;
 INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (1, 1, 'Pierre', 'Lignole', '12/12/2000', 'plignole@free.fr', 'plignole', 'djdijz@dijd9', 'DIUZHD9892372HDIZHDIUHDIUZ', 1);
 INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (2, 2, 'Camille', 'Poussin', '03/03/2002', 'cpoussin@orange.fr', 'cpoussin', 'tetedndndn998', 'IDUZHIUZH78Y238476GUEGYFZ', 1);
 INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (3, 3, 'Marouane', 'Hedi', '04/04/1989', 'mhedi@ocpizzagroup.fr', 'mhedi', 'diuzhaduih6735$', 'DZOIHA9Y9237YDG297863GdDF', 1);
+INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (4, 4, 'Eric', 'Durand', '04/05/1988', 'edurand@gmail.com', 'edurand', NULL, NULL, DEFAULT);
 
 COMMIT;
 
@@ -184,6 +184,7 @@ USE `OCPizza`;
 INSERT INTO `OCPizza`.`EmployeeHasRole` (`Role_role_id`, `Employee_employee_id`) VALUES (1, 1);
 INSERT INTO `OCPizza`.`EmployeeHasRole` (`Role_role_id`, `Employee_employee_id`) VALUES (2, 2);
 INSERT INTO `OCPizza`.`EmployeeHasRole` (`Role_role_id`, `Employee_employee_id`) VALUES (3, 3);
+INSERT INTO `OCPizza`.`EmployeeHasRole` (`Role_role_id`, `Employee_employee_id`) VALUES (4, 4);
 
 COMMIT;
 
@@ -248,6 +249,27 @@ COMMIT;
 START TRANSACTION;
 USE `OCPizza`;
 INSERT INTO `OCPizza`.`OrderHasItem` (`Order_order_id`, `Item_item_id`) VALUES (1, 4);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `OCPizza`.`EmployeeHasOrder`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `OCPizza`;
+INSERT INTO `OCPizza`.`EmployeeHasOrder` (`Employee_employee_id`, `Order_order_id`) VALUES (4, 1);
+INSERT INTO `OCPizza`.`EmployeeHasOrder` (`Employee_employee_id`, `Order_order_id`) VALUES (4, 2);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `OCPizza`.`CustomerHasOrder`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `OCPizza`;
+INSERT INTO `OCPizza`.`CustomerHasOrder` (`Customer_customer_id`, `Order_order_id`) VALUES (3, 3);
 
 COMMIT;
 
