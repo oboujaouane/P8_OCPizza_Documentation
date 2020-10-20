@@ -71,9 +71,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `OCPizza`;
-INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`) VALUES (1, '123456', 'Franck', 'Dupont', '12/01/1960', 'fdupont@gmail.com', 'fdupont', 'fdupont90$', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9', 1);
-INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`) VALUES (2, '123457', 'Edouard', 'Godet', '15/03/1987', 'egodet@yahoo.fr', 'egodet', 'titietgrosminet98', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCOP', 2);
-INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`) VALUES (3, '123458', 'Marie', 'Lac', '27/10/1990', 'mlac@gmail.com', 'mlac', 'yoyolili45', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJD', 3);
+INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (1, '123456', 'Franck', 'Dupont', '12/01/1960', 'fdupont@gmail.com', 'fdupont', 'fdupont90$', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9', 1, DEFAULT, DEFAULT);
+INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (2, '123457', 'Edouard', 'Godet', '15/03/1987', 'egodet@yahoo.fr', 'egodet', 'titietgrosminet98', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCOP', 2, DEFAULT, DEFAULT);
+INSERT INTO `OCPizza`.`Customer` (`customer_id`, `account_number`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Address_address_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (3, '123458', 'Marie', 'Lac', '27/10/1990', 'mlac@gmail.com', 'mlac', 'yoyolili45', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJD', 3, DEFAULT, DEFAULT);
 
 COMMIT;
 
@@ -83,10 +83,10 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `OCPizza`;
-INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (1, 1, 'Pierre', 'Lignole', '12/12/2000', 'plignole@free.fr', 'plignole', 'djdijz@dijd9', 'DIUZHD9892372HDIZHDIUHDIUZ', 1);
-INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (2, 2, 'Camille', 'Poussin', '03/03/2002', 'cpoussin@orange.fr', 'cpoussin', 'tetedndndn998', 'IDUZHIUZH78Y238476GUEGYFZ', 1);
-INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (3, 3, 'Marouane', 'Hedi', '04/04/1989', 'mhedi@ocpizzagroup.fr', 'mhedi', 'diuzhaduih6735$', 'DZOIHA9Y9237YDG297863GdDF', 1);
-INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`) VALUES (4, 4, 'Eric', 'Durand', '04/05/1988', 'edurand@gmail.com', 'edurand', NULL, NULL, DEFAULT);
+INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (1, 1, 'Pierre', 'Lignole', '12/12/2000', 'plignole@free.fr', 'plignole', 'djdijz@dijd9', 'DIUZHD9892372HDIZHDIUHDIUZ', 1, DEFAULT, DEFAULT);
+INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (2, 2, 'Camille', 'Poussin', '03/03/2002', 'cpoussin@orange.fr', 'cpoussin', 'tetedndndn998', 'IDUZHIUZH78Y238476GUEGYFZ', 1, DEFAULT, DEFAULT);
+INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (3, 3, 'Marouane', 'Hedi', '04/04/1989', 'mhedi@ocpizzagroup.fr', 'mhedi', 'diuzhaduih6735$', 'DZOIHA9Y9237YDG297863GdDF', 1, DEFAULT, DEFAULT);
+INSERT INTO `OCPizza`.`Employee` (`employee_id`, `account_status`, `first_name`, `last_name`, `birthday`, `email`, `login`, `password`, `token`, `Pizzeria_pizzeria_id`, `Order_order_id`, `Order_Pizzeria_pizzeria_id`) VALUES (4, 4, 'Eric', 'Durand', '04/05/1988', 'edurand@gmail.com', 'edurand', NULL, NULL, DEFAULT, DEFAULT, DEFAULT);
 
 COMMIT;
 
@@ -249,27 +249,6 @@ COMMIT;
 START TRANSACTION;
 USE `OCPizza`;
 INSERT INTO `OCPizza`.`OrderHasItem` (`Order_order_id`, `Item_item_id`) VALUES (1, 4);
-
-COMMIT;
-
-
--- -----------------------------------------------------
--- Data for table `OCPizza`.`EmployeeHasOrder`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `OCPizza`;
-INSERT INTO `OCPizza`.`EmployeeHasOrder` (`Employee_employee_id`, `Order_order_id`) VALUES (4, 1);
-INSERT INTO `OCPizza`.`EmployeeHasOrder` (`Employee_employee_id`, `Order_order_id`) VALUES (4, 2);
-
-COMMIT;
-
-
--- -----------------------------------------------------
--- Data for table `OCPizza`.`CustomerHasOrder`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `OCPizza`;
-INSERT INTO `OCPizza`.`CustomerHasOrder` (`Customer_customer_id`, `Order_order_id`) VALUES (3, 3);
 
 COMMIT;
 
